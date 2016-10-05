@@ -1,0 +1,536 @@
+[FILE VERSION]
+CMissionSimulation	1
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+CMissionSimulation	3
+
+
+[OBJECT VERSION]
+CMissionGeneralData	1
+[Name]
+
+[Author]
+
+[Aircraft File]
+LWF.acft
+
+
+[OBJECT VERSION]
+CProjectAircraftSetting	2
+[Active Setting]
+1
+
+[Active Store Setting]
+-1
+
+[Settings]
+4
+Cruise, Dry
+Cruise, Reheat
+TOL, Reheat
+TOL, Dry
+
+[Store Settings]
+1
+Air-to-Air
+
+
+
+[OBJECT VERSION]
+CStoreLst	1
+[number of stores]
+0
+[Atmosphere File]
+default file
+
+
+[OBJECT VERSION]
+CMissionAircraft	1
+
+
+[OBJECT VERSION]
+CMisOptData	2
+[optimizer]
+0
+[segment number to optimize]
+0
+0
+[radius of action points]
+0
+0
+0
+0
+[Fuel Percent]
+0
+[Distance]
+0
+[mission precision]
+0.1
+
+
+[OBJECT VERSION]
+CFlightData	2
+[Acceleration]
+0
+[SEP]
+0
+[Altitude]
+0
+[dT]
+0
+[Payload]
+0
+[Engine Revolution]
+0
+[Distance]
+0
+[Seg. Dist.]
+0
+[Time]
+0
+[Seg. Time]
+0
+[Turns]
+0
+[Mach]
+REAL_MACH
+0.6
+[Climb Angle]
+REAL_GAMMA
+0
+[Pull-Up Rate]
+REAL_PR
+0
+[Fuel Percent]
+REAL_FUELPERC
+1
+[Power Setting]
+REAL_POWER
+1
+[AoA]
+REAL_AOA
+0
+[Engine Revolution]
+REAL_REVOLUTION
+0
+[segment list]
+4
+[-------------------- segment index --------------------]
+SEG_BESTCLIMBRATE
+
+
+[OBJECT VERSION]
+COptClimbRateSegment	3
+
+
+[OBJECT VERSION]
+CFlightData	2
+[Acceleration]
+0
+[SEP]
+0
+[Altitude]
+0
+[dT]
+0
+[Payload]
+0
+[Engine Revolution]
+0
+[Distance]
+0
+[Seg. Dist.]
+0
+[Time]
+0
+[Seg. Time]
+0
+[Turns]
+0
+[Mach]
+REAL_MACH
+0
+[Climb Angle]
+REAL_GAMMA
+0
+[Pull-Up Rate]
+REAL_PR
+0
+[Fuel Percent]
+REAL_FUELPERC
+1
+[Power Setting]
+REAL_POWER
+1
+[AoA]
+REAL_AOA
+0
+[Engine Revolution]
+REAL_REVOLUTION
+0
+[setting number]
+1
+[Time Step]
+2
+[Altitude]
+REAL_ALT
+11000
+[comparator 1, less=0, greater=1]
+1
+[None]
+REAL_NONE
+0
+[comparator 2, less=0, greater=1]
+1
+[integration flag]
+1
+1
+1
+[None]
+REAL_NONE
+-99
+[None]
+REAL_NONE
+-99
+[special integer]
+-1
+[-------------------- segment index --------------------]
+SEG_ACCELERATION
+
+
+[OBJECT VERSION]
+CAccelerationSegment	3
+
+
+[OBJECT VERSION]
+CFlightData	2
+[Acceleration]
+0
+[SEP]
+0
+[Altitude]
+0
+[dT]
+0
+[Payload]
+0
+[Engine Revolution]
+0
+[Distance]
+0
+[Seg. Dist.]
+0
+[Time]
+0
+[Seg. Time]
+0
+[Turns]
+0
+[Mach]
+REAL_MACH
+0
+[Climb Angle]
+REAL_GAMMA
+-0.0174532925199
+[Pull-Up Rate]
+REAL_PR
+0
+[Fuel Percent]
+REAL_FUELPERC
+1
+[Power Setting]
+REAL_POWER
+1
+[AoA]
+REAL_AOA
+0
+[Engine Revolution]
+REAL_REVOLUTION
+0
+[setting number]
+1
+[Time Step]
+1
+[Mach]
+REAL_MACH
+1.25
+[comparator 1, less=0, greater=1]
+1
+[None]
+REAL_NONE
+0
+[comparator 2, less=0, greater=1]
+1
+[integration flag]
+1
+1
+1
+[None]
+REAL_NONE
+-99
+[None]
+REAL_NONE
+-99
+[special integer]
+-1
+[-------------------- segment index --------------------]
+SEG_ACCELERATION
+
+
+[OBJECT VERSION]
+CAccelerationSegment	3
+
+
+[OBJECT VERSION]
+CFlightData	2
+[Acceleration]
+0
+[SEP]
+0
+[Altitude]
+0
+[dT]
+0
+[Payload]
+0
+[Engine Revolution]
+0
+[Distance]
+0
+[Seg. Dist.]
+0
+[Time]
+0
+[Seg. Time]
+0
+[Turns]
+0
+[Mach]
+REAL_MACH
+0
+[Climb Angle]
+REAL_GAMMA
+0.0174532925199
+[Pull-Up Rate]
+REAL_PR
+0
+[Fuel Percent]
+REAL_FUELPERC
+1
+[Power Setting]
+REAL_POWER
+1
+[AoA]
+REAL_AOA
+0
+[Engine Revolution]
+REAL_REVOLUTION
+0
+[setting number]
+1
+[Time Step]
+1
+[Mach]
+REAL_MACH
+1.4
+[comparator 1, less=0, greater=1]
+1
+[None]
+REAL_NONE
+0
+[comparator 2, less=0, greater=1]
+1
+[integration flag]
+1
+1
+1
+[None]
+REAL_NONE
+-99
+[None]
+REAL_NONE
+-99
+[special integer]
+-1
+[-------------------- segment index --------------------]
+SEG_TARGETMACHCLIMB
+
+
+[OBJECT VERSION]
+CMachClimbSegment	3
+
+
+[OBJECT VERSION]
+CFlightData	2
+[Acceleration]
+0
+[SEP]
+0
+[Altitude]
+0
+[dT]
+0
+[Payload]
+0
+[Engine Revolution]
+0
+[Distance]
+0
+[Seg. Dist.]
+0
+[Time]
+0
+[Seg. Time]
+0
+[Turns]
+0
+[Mach]
+REAL_MACH
+0
+[Climb Angle]
+REAL_GAMMA
+0
+[Pull-Up Rate]
+REAL_PR
+0
+[Fuel Percent]
+REAL_FUELPERC
+1
+[Power Setting]
+REAL_POWER
+1
+[AoA]
+REAL_AOA
+0
+[Engine Revolution]
+REAL_REVOLUTION
+0
+[setting number]
+1
+[Time Step]
+2
+[SEP]
+REAL_SEP
+2.54
+[comparator 1, less=0, greater=1]
+0
+[None]
+REAL_NONE
+0
+[comparator 2, less=0, greater=1]
+1
+[integration flag]
+1
+1
+1
+[None]
+REAL_NONE
+-99
+[None]
+REAL_NONE
+-99
+[special integer]
+-1
+[FILE VERSION]
+CData	1
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+CData	3
+[Computation]
+CMP_MISSION
+[X-Parameter]
+REAL_TIME
+[Y-Parameter]
+REAL_ALT
+
+
+[OBJECT VERSION]
+X0TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+REAL_NONE
+[RANGE TABLE VALUES][None]
+0
+
+
+
+[OBJECT VERSION]
+X0TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+REAL_NONE
+[RANGE TABLE VALUES][None]
+0
+
+
+
+[OBJECT VERSION]
+CMissionVariationData	1
+[FILE VERSION]
+CData	1
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+CData	3
+[Computation]
+CMP_NONE
+[X-Parameter]
+REAL_NONE
+[Y-Parameter]
+REAL_NONE
+
+
+[OBJECT VERSION]
+X0TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+REAL_NONE
+[RANGE TABLE VALUES][None]
+0
+
+
+
+[OBJECT VERSION]
+X0TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+REAL_NONE
+[RANGE TABLE VALUES][None]
+0
+
+[XParameter]
+VAR_NONE
+
+[YParameter]
+VAR_NONE
+
+
+
+[OBJECT VERSION]
+CResultType	1
+[Index]
+RESULT_MISSIONEND
+[SegNrStart]
+-1
+[SegNrEnd]
+-1
