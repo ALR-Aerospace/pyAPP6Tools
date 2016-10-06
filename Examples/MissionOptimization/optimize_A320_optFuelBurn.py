@@ -17,6 +17,6 @@ if __name__ == "__main__":
                   segmentParameter(7,154.33,updateEndCondition)]
     
     
-    obj = missionObjective('Fuel Mass',resFunctionMinimizeEndValue,mode='min')
+    obj = missionObjective('Fuel Mass',resFunctionMinimizeEndValue,mode='max')
     
     res = MissionOptimization.optimizeMission(misfile=misfile, segParList=segParList, misObjective=obj)
