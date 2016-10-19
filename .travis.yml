@@ -5,5 +5,7 @@ before_install:
     - pip install pytest pytest-cov
 script:
     - ls -l
-    - cd $TRAVIS_BUILD_DIR
+    - echo $TRAVIS_BUILD_DIR
+    - cd pyAPP6Tools
+    - ls -l
     - py.test tests --verbose --cov=pyAPP6Tools
