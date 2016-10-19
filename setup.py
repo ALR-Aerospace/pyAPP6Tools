@@ -32,7 +32,7 @@ test_requirements = [
 
 setup(
     name='pyAPP6Tools',
-    version='0.1',
+    version='0.2',
     description="Python package with functions to be used with pyAPP and the ALR Aircraft Performance Program APP",
     long_description=readme + '\n\n' + history,
     author="ALR Aerospace",
