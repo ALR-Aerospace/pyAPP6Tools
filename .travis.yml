@@ -2,7 +2,7 @@ language: python
 python:
     - "2.7"
 before_install:
-    - pip install numpy scipy 
+    - pip install --only-binary=numpy,scipy numpy scipy
     - pip install pytest pytest-cov
 install:
     - pip install .
