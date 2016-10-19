@@ -24,4 +24,4 @@ install:
     - pip install pytest pytest-cov
     - python setup.py install
 script:
-    - py.test tests --verbose --cov=pyAPP6Tools
+    - py.test tests --verbose --cov
