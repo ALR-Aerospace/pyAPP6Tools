@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-This module provides data for the international standard atmosphere (ISA) as implemented in APP, through
-the two functions getAirState and getPressureAlt
+This module provides data for the international standard atmosphere (ISA) as
+implemented in APP, through the two functions getAirState and getPressureAlt
 
 Copyright 2016, ALR
 """
@@ -15,7 +15,7 @@ import numpy as np
 
 i_max = 8
 
-minH = -1000
+minH = -1000.0
 maxH = +80.0e3
 min_dT = -50.0
 max_dT = +50.0
@@ -48,12 +48,9 @@ def getAirState(alt, dT):
         Tuple containing temperature [K], pressure [Pa], density [Kg/m^3],
         viscosity [Ns/(m^2)] and speed of sound [m/s]
     '''
-    if alt > maxH or alt < minH:
-        raise ValueError('Altitude Values out of Bounds')
-    if dT > max_dT or dT < min_dT:
-        raise ValueError('Temperature Values out of Bounds')
     Hp = getPressureAlt(alt, dT)
-    index = np.where(np.array(Hi) <= Hp)[0][-1]
+
+    index = _getIndex(Hp)
 
     temp = _temperature(Hp, dT, index)
     Tisa = _temperature(Hp, 0.0, index)
@@ -66,7 +63,7 @@ def getAirState(alt, dT):
 
 def getPressureAlt(alt, dT):
     '''
-    Function to calculate the pressure altitude for a given temperature 
+    Function to calculate the pressure altitude for a given temperature
     offset dT from the standard atmosphere.
 
     Arguments
@@ -81,6 +78,10 @@ def getPressureAlt(alt, dT):
     float
         Pressure altitude [m]
     '''
+    if alt > maxH or alt < minH:
+        raise ValueError('Altitude Values out of Bounds')
+    if dT > max_dT or dT < min_dT:
+        raise ValueError('Temperature Values out of Bounds')
     if dT == 0.0:
         return alt
     else:
@@ -90,8 +91,7 @@ def getPressureAlt(alt, dT):
 
         counter = 0
         while (abs(Hp-Hpold) > 1) and (counter < 100):
-
-            i = np.where(np.array(Hi) <= Hp)[0][-1]
+            i = _getIndex(Hp)
             T = _temperature(Hp, 0.0, i)
             p = _pressure(Hp, T, i)
 
@@ -101,9 +101,28 @@ def getPressureAlt(alt, dT):
             counter += 1
         return Hp
 
+def _getIndex(Hp):
+    '''
+    Internal helper function to get current layer index
+
+    Arguments
+    ---------
+    Hp : float
+        pressure altitude [m]
+
+    Returns
+    -------
+    int
+        layer index
+    '''
+    if Hp < Hi[0]:
+        return 0
+    else:
+        return np.where(np.array(Hi) <= Hp)[0][-1]
+
 def _dynamicViscosity(temp):
     ''' Dynamic Viscosity according to Sutherland's empicial coefficients. See ESDU 77022.
-    
+
     Arguments
     ---------
     temp : float
