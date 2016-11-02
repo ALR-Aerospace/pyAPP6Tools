@@ -20,8 +20,8 @@ maxH = +80.0e3
 min_dT = -50.0
 max_dT = +50.0
 
-G = 9.80665
-R = (8.31432e3 / 28.96442)
+G = 9.80665 #according to ESDU 77022
+R = (8.31432e3 / 28.96442) #R/m, according to ESDU 77022
 GAMMA = 1.4
 
 Hi = [0.0, 11e3, 20e3, 32e3, 47e3, 51e3, 71e3, 80e3]
