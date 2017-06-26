@@ -23,6 +23,10 @@ The pyAPP6Tools package comprises the following modules:
 
 Atmosphere
     Functions to get data from the International Standard Atmosphere (ISA)
+    
+Interpolation
+    Functions to interpolate and extrapolate in 2D and 3D tables,
+    using the APP6 interpoation functions.
 
 MissionOptimization
     Functions to optimize APP6 mission parameter using scipy optimiztaion
@@ -30,4 +34,4 @@ MissionOptimization
 Examples
 ===================
 
-In the folder *Examples*, python scripts are given to demonstrate features of the modules 
+In the folder *Examples*, python scripts are given to demonstrate features of the modules
