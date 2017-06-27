@@ -5,12 +5,16 @@ Created on Tue Feb 23 16:07:01 2016
 @author: alr
 """
 #pylint: disable-msg=C0103
+
 import numpy as np
 from pyAPP6.Files import X2Table
 
 def addArraysToX3Table(a, b, c, d, x3table_output, clear_table=True):
     '''
     Reformats and adds the arrays a, b, c and d to a pyAPP X3Table
+    
+    This function is useful to convert CPACS or GasTurb propulsion output into
+    the APP format.
 
     .. note::
         For propulsion data, (a,b,c,d) would correspond to (alt, Mach, thrust, fuelflow),
@@ -49,9 +53,6 @@ def restructureArrayData(a, b, c, d):
 
     Takes numpy arrays in the form (a,b,c,d) and reorders it into a
     nested list with (a,(b,(c,d))). The arrays a,b,c,d all have to be of shape (N,)
-
-    This function is useful to convert CPACS or GasTurb propulsion output into
-    the APP format.
 
     .. note::
         For APP propulsion data, (a,b,c,d) would correspond to (alt, Mach, thrust, fuelflow),
@@ -106,3 +107,53 @@ def restructureArrayData(a, b, c, d):
             m_list.append([m, t_ff_array])
 
     return result
+
+def convertX3TableToArrays(x3table):
+    '''
+    Reformats a pyAPP X3Table into array form (a, b, c, d)
+    
+    This function is useful to convert APP data into CPACS format.
+    
+    .. note::
+        For propulsion data, the x3table corresponds to an APP fuel flow table 
+        and the output (a,b,c,d) would correspond to (alt, Mach, thrust, fuelflow).
+
+    .. note::
+        Loss of data can occur when converting from APP to CPACS, since the Max.
+        Thrust Values tables of APP do not exist in CPACS. Make sure to append
+        these values to the ouput array, or trim the output values accordingly.
+
+    Arguments
+    ---------
+    x3table : pyAPP6.Files.X3Table
+        X3Table instance with the data to convert
+
+    Returns
+    -------
+    tuple
+        a tuple (a,b,c,d) containing numpy arrays with equal length
+    '''
+
+    a_list = [] #Alt
+    b_list = [] #Mach
+    c_list = [] #Thrust
+    d_list = [] #Fuel Flow
+
+    for val_a, tab_x2 in zip(x3table.value, x3table.table):
+        for val_b, tab_x1 in zip(tab_x2.value, tab_x2.table):
+            thrust = tab_x1[:, 0]
+            ff = tab_x1[:, 1]
+            alt = [val_a] * len(thrust)
+            Mach = [val_b] * len(thrust)
+            a_list.extend(alt)
+            b_list.extend(Mach)
+            c_list.extend(thrust)
+            d_list.extend(ff)
+
+    #convert to numpy arrays (creates copy)
+    a = np.array(a_list)
+    b = np.array(b_list)
+    c = np.array(c_list)
+    d = np.array(d_list)
+
+    return a, b, c, d
