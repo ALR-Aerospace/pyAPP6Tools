@@ -1,0 +1,364 @@
+[FILE VERSION]
+CAircraftModel	1
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+CAircraftModel	1
+
+
+[OBJECT VERSION]
+CAircraftGeneralData	1
+[Aircraft Name]
+
+[Manufacturer]
+
+[Variant]
+
+[Year]
+
+[Author]
+
+[Version]
+
+[Date]
+31/08/2016
+[number of config data]
+1
+[config name]
+Clean
+[configuration file]
+[FILE VERSION]
+CConfig	2
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+CMass	1
+[Structure]
+0
+[Propulsion Group]
+0
+[Equipment]
+0
+[Mass Deviation]
+0
+[Fixed Op. Equipment]
+0
+[Unusable Fuel and Oil]
+0
+[Gun]
+0
+[Removable Op. Equipment]
+0
+[Usable Oil]
+0
+[Crew]
+0
+[Spec. Mission Equipment]
+0
+[Ammunition]
+0
+[Payload]
+0
+[Internal Fuel]
+0
+
+
+[OBJECT VERSION]
+CGear	1
+[Gear Drag Area]
+0
+[AoA on Ground]
+0
+[fixed gear, no=0, yes=1]
+0
+
+
+[OBJECT VERSION]
+CTOLParameter	0
+[Tailstrike Angle]
+0
+0
+[Max. Tire Speed]
+0
+0
+
+
+[OBJECT VERSION]
+CConfig	3
+[Number of Engines]
+0
+[Thrust Multiplier]
+1
+[Fuel Flow Multiplier]
+1
+[Thrust Line Angle]
+0
+[Delta Drag Area]
+0
+[Drag Multiplier]
+1
+[Pos. Limit Load Factor]
+0
+[Neg. Limit Load Factor]
+0
+[Minimum AoA]
+0
+[Maximum AoA]
+0
+[Max. Take-Off Mass]
+-1
+0
+
+
+[OBJECT VERSION]
+X1TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][Placard Mach = f( Altitude )]
+1
+0	0
+
+
+
+[OBJECT VERSION]
+X1TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][G(AoA) Limiter = f( AoA )]
+1
+0	-1
+
+[number of aero data]
+1
+[aero name]
+Cruise
+[aerodynamics file]
+[FILE VERSION]
+CDrag	1
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+[Aspect Ratio]
+1
+[Reference Area]
+0
+
+
+[OBJECT VERSION]
+X2TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][CD0 = f( Mach, Altitude )]
+1
+0
+1
+0	0
+
+
+
+
+[OBJECT VERSION]
+X2TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+1	1	0
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][CDl = f( CL, Mach )]
+1
+0
+1
+0	0
+
+
+
+
+[OBJECT VERSION]
+X1TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][CLmax = f( Mach )]
+1
+0	0
+
+
+
+[OBJECT VERSION]
+X1TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][DCL = f( Mach )]
+1
+0	0
+
+
+
+[OBJECT VERSION]
+X2TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][CL = f( AoA, Mach )]
+1
+0
+1
+0	0
+
+
+[number of store data]
+0
+[number of propulsion data]
+1
+PROPULSION_JET
+[propulsion name]
+Generic
+[propulsion file]
+
+
+[OBJECT VERSION]
+CJetPropulsionData	1
+[Engine Manufacturer]
+
+[Engine Variant]
+
+[number of thrust data]
+1
+[name of thrust data]
+Cruise Thrust
+[FILE VERSION]
+CJetThrust	3
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+X2TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[INTERPOLATION SETTINGS]
+1	1	0
+[FUNCTION TABLE VALUES][Max. Thrust = f( Mach, Altitude )]
+1
+0
+1
+0	0
+
+
+
+
+[OBJECT VERSION]
+X2TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[INTERPOLATION SETTINGS]
+0	1	0
+[FUNCTION TABLE VALUES][Min. Thrust = f( Mach, Altitude )]
+1
+0
+1
+0	0
+
+
+[associated fuel flow file name]
+Fuel Flow
+[number of fuel data]
+1
+[name of fuel data]
+Fuel Flow
+[FILE VERSION]
+CJetFuel	1
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+X3TABLE	1
+[FUNCTION TABLE SETTINGS]
+1
+[INTERPOLATION SETTINGS]
+0	1	0
+[INTERPOLATION SETTINGS]
+0	1	0
+[INTERPOLATION SETTINGS]
+1	1	0
+[FUNCTION TABLE VALUES][Fuel Flow = f( Thrust, Mach, Altitude )]
+1
+0
+1
+0
+1
+0	0
+
+
+
+[project file]
+[FILE VERSION]
+CProjectAircraft	1
+
+
+[OBJECT VERSION]
+CText	1
+[USER TEXT]
+0
+
+
+[OBJECT VERSION]
+CProjectAircraft	2
+[number of settings]
+1
+[setting name]
+Cruise
+[configuration file]
+Clean
+[aerodynamic files]
+1
+Cruise
+[propulsion files]
+Generic
+[thrust files]
+Cruise Thrust
+[number of store settings]
+0
