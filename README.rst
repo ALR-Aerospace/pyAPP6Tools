@@ -4,11 +4,11 @@ pyAPP6Tools
 
 Community extensions to the ALR pyAPP6 Python module. Infomation on APP and pyAPP6 can be found here: http://aircraftperformance.software/pyapp/
 
-.. image:: https://travis-ci.org/ALR-Aerospace/pyAPP6Tools.svg?branch=master
+.. image:: https://travis-ci.org/ALR-Aerospace/pyAPP6Tools.svg?branch=feature-CPACS
     :target: https://travis-ci.org/ALR-Aerospace/pyAPP6Tools
 
-.. image:: https://coveralls.io/repos/github/ALR-Aerospace/pyAPP6Tools/badge.svg?branch=master
-    :target: https://coveralls.io/github/ALR-Aerospace/pyAPP6Tools?branch=master
+.. image:: https://coveralls.io/repos/github/ALR-Aerospace/pyAPP6Tools/badge.svg?branch=feature-CPACS
+    :target: https://coveralls.io/github/ALR-Aerospace/pyAPP6Tools?branch=feature-CPACS
 
 
 Installation
@@ -36,6 +36,9 @@ MissionOptimization
     
 PropulsionHelper
     Helper functions to manipulate APP propulsion data
+
+TableHelper
+    Helper functions to manipulate pyAPP6 XTable data
     
 Examples
 ===================
