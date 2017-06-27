@@ -41,3 +41,9 @@ class TestFiles(unittest.TestCase):
         x=-1.0
         yi=Interpolation.interp1dEx(x, numpyTable, kind='spline')
         self.assertEqual(yi,-1.0)
+        
+    def test_interp1dEx_splineInterp(self):
+        numpyTable=np.array([[0.0,0.0],[1.0,1.0]]) #[x,y] , [x2,y2]
+        x=0.5
+        yi=Interpolation.interp1dEx(x, numpyTable, kind='spline')
+        self.assertEqual(yi,0.5)
