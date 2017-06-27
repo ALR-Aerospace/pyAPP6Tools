@@ -34,6 +34,9 @@ Interpolation
 MissionOptimization
     Functions to optimize APP6 mission parameter using scipy optimiztaion
     
+PropulsionHelper
+    Helper functions to manipulate APP propulsion data
+    
 Examples
 ===================
 
