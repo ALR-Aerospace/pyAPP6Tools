@@ -13,6 +13,7 @@ import numpy as np
 
 #use mock to removed missing dependency from TableHelper
 sys.modules['pyAPP6'] = mock.Mock()
+sys.modules['pyAPP6.Files'] = mock.Mock()
 
 from pyAPP6Tools import TableHelper
 
