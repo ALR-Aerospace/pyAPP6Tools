@@ -23,7 +23,10 @@ The pyAPP6Tools package comprises the following modules:
 
 Atmosphere
     Functions to get data from the International Standard Atmosphere (ISA)
-    
+
+CPACS
+    Functions to convert between CPACS and APP
+
 Interpolation
     Functions to interpolate and extrapolate in 2D and 3D tables,
     using the APP6 interpoation functions.
