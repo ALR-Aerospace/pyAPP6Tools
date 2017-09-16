@@ -2,7 +2,7 @@
 pyAPP6Tools
 ===============================
 
-Community extensions to the ALR pyAPP6 Python module. Infomation on APP and pyAPP6 can be found here: http://aircraftperformance.software/pyapp/
+Community extensions to the ALR pyAPP6 Python module. Information on APP and pyAPP6 can be found here: http://aircraftperformance.software/pyapp/
 
 .. image:: https://travis-ci.org/ALR-Aerospace/pyAPP6Tools.svg?branch=master
     :target: https://travis-ci.org/ALR-Aerospace/pyAPP6Tools
@@ -25,7 +25,7 @@ Atmosphere
     Functions to get data from the International Standard Atmosphere (ISA)
 
 MissionOptimization
-    Functions to optimize APP6 mission parameter using scipy optimiztaion
+    Functions to optimize APP6 mission parameter using scipy optimization
     
 Examples
 ===================
