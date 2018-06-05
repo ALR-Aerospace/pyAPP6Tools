@@ -27,6 +27,9 @@ Atmosphere
 MissionOptimization
     Functions to optimize APP6 mission parameter using scipy optimization
     
+TableHelper
+    Functions to reshape tables from different formats into APPs table format
+    
 Examples
 ===================
 
